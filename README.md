@@ -1,5 +1,5 @@
 # shuffle-promise
-Shuffle an array with a promise
+Simple array randomization with a promise.
 
 [![Build Status](https://magnum.travis-ci.com/dcamilleri/shuffle-promise.svg?token=aNpmikxhysGoeT5oNauy)](https://magnum.travis-ci.com/dcamilleri/shuffle-promise)
 
@@ -15,9 +15,13 @@ $ npm install --save shuffle-promise
 var shufflePromise = require('shufflePromise');
 var srcArray = [1, 2, 'Foo', {bar: 1}];
 
-shufflePromise(srcArray).then(function(shuffledArray) {
-	// ['Foo', 2, {bar: 1}, 1] !	
-});
+shufflePromise(srcArray)
+	.then(function(shuffledArray) {
+		// ['Foo', 2, {bar: 1}, 1] Yay!	
+	})
+	.catch(function(error) {
+		// Get an error if your array is empty
+	});
 ```
 
 ## License
