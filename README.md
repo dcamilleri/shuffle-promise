@@ -1,7 +1,7 @@
 # shuffle-promise
 Simple array randomization with a promise.
 
-[![Build Status](https://magnum.travis-ci.com/dcamilleri/shuffle-promise.svg?token=aNpmikxhysGoeT5oNauy)](https://magnum.travis-ci.com/dcamilleri/shuffle-promise)
+[![Build Status](https://travis-ci.org/dcamilleri/shuffle-promise.svg)](https://travis-ci.org/dcamilleri/shuffle-promise)
 
 ## Install
 
