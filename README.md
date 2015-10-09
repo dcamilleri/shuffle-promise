@@ -12,7 +12,7 @@ $ npm install --save shuffle-promise
 ## Usage
 
 ```js
-var shufflePromise = require('shufflePromise');
+var shufflePromise = require('shuffle-promise');
 var srcArray = [1, 2, 'Foo', {bar: 1}];
 
 shufflePromise(srcArray)
@@ -20,7 +20,7 @@ shufflePromise(srcArray)
 		// ['Foo', 2, {bar: 1}, 1] Yay!	
 	})
 	.catch(function(error) {
-		// Get an error if your array is empty
+		// Catch errors
 	});
 ```
 
