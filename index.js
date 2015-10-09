@@ -1,28 +1,9 @@
 'use strict';
 
 module.exports = function(array) {
-  var usedPositions = [];
-  var arrayLength = array.length;
-
-  function getIndex() {
-    var randomNb = Math.floor(Math.random() * arrayLength);
-    if(!usedPositions[randomNb]) {
-      usedPositions[randomNb] = true;
-      return randomNb;
-    } else {
-      return getIndex();
-    }
+  if (!array.length) {
+    return Promise.reject(new Error('Randomize error: Array is empty.'));
   }
 
-  return new Promise(function(resolve, reject) {
-    if(!array.length) {
-      reject(new Error('Randomize error: Array is empty.'));
-    }
-    var randomizedArray =
-      array.map(function() {
-        var randomIndex = getIndex();
-        return array[randomIndex];
-      });
-    resolve(randomizedArray);
-  });
+  return Promise.all(array.slice().sort(function() { return 0.5 - Math.random(); }));
 };
