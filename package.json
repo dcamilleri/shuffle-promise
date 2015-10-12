@@ -1,6 +1,6 @@
 {
   "name": "shuffle-promise",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Shuffle an array with a promise",
   "main": "index.js",
   "directories": {
